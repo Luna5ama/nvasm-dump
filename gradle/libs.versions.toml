@@ -1,0 +1,14 @@
+[versions]
+kotlin = "2.3.0"
+kotlinDSL = "6.5.2"
+
+lwjgl = "3.3.6"
+jarOptimizer = "1.2.2"
+
+[plugins]
+kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+jarOptimizer = { id = "dev.luna5ama.jar-optimizer", version.ref = "jarOptimizer" }
+
+[libraries]
+kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlinDSLGradlePlugin = { module = "org.gradle.kotlin.kotlin-dsl:org.gradle.kotlin.kotlin-dsl.gradle.plugin", version.ref = "kotlinDSL" }
