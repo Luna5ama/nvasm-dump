@@ -6,6 +6,7 @@ allprojects {
 plugins {
     id("buildsrc.convention.kotlin-jvm")
     alias(libs.plugins.jarOptimizer)
+    alias(libs.plugins.kotlinxSerialization)
 }
 
 dependencies {
@@ -15,6 +16,8 @@ dependencies {
     implementation("org.lwjgl", "lwjgl-opengl")
     implementation("org.lwjgl", "lwjgl-stb")
     implementation("org.lwjgl", "lwjgl-nfd")
+    implementation(libs.kotlinxSerializationCore)
+    implementation(libs.kotlinxSerializationJson)
     val platforms = listOf("linux", "windows")
     platforms.forEach {
         runtimeOnly("org.lwjgl", "lwjgl", classifier = "natives-$it")
@@ -24,8 +27,6 @@ dependencies {
         runtimeOnly("org.lwjgl", "lwjgl-nfd", classifier = "natives-$it")
     }
 }
-
-
 
 tasks {
     jar {
