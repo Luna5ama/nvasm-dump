@@ -3,8 +3,8 @@
 A tool to dump NVIDIA Vendor-Specific OpenGL Assembly
 
 ## Hardware Requirements
-
-A GPU with proper OpenGL 4.6 support
+- A GPU with proper OpenGL 4.6 support
+- Java 8 or higher
 
 ## Usage
 `java -jar nvmasm-dump.jar <output directory> <input shader files>...`
